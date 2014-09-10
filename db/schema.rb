@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910211929) do
+ActiveRecord::Schema.define(version: 20140910212341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20140910211929) do
   end
 
   create_table "weeks", force: true do |t|
-    t.integer "campaign_id", null: false
+    t.integer "campaign_id",  null: false
+    t.string  "blog_name"
+    t.string  "blog_url"
+    t.string  "systemscheck"
   end
 
 end
