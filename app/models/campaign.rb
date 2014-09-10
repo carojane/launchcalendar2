@@ -1,5 +1,7 @@
 class Campaign < ActiveRecord::Base
   has_many :weeks
+  has_many :days
+  has_many :assignments, through: :days
 
   validates :name, presence: true
   validates :start_date, presence: true
