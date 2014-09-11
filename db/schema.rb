@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140911194909) do
+ActiveRecord::Schema.define(version: 20140911204024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,10 +31,9 @@ ActiveRecord::Schema.define(version: 20140911194909) do
   end
 
   create_table "days", force: true do |t|
-    t.string  "name",        null: false
-    t.integer "week_id",     null: false
     t.string  "focus"
-    t.integer "campaign_id", null: false
+    t.integer "campaign_id",                        null: false
+    t.date    "date",        default: '2014-08-11', null: false
   end
 
   create_table "weeks", force: true do |t|
