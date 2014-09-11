@@ -10,7 +10,7 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
-  @campaigns = Campaign.all
+  @campaigns = Campaign.all.order(name: :asc)
 
   erb :index
 end

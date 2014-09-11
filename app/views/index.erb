@@ -18,17 +18,24 @@
     </td>
   </tr>
 
-   <% campaign.weeks.each do |w| %>
+   <% weeks = campaign.weeks.order('id ASC')
+    weeks.each do |w| %>
 
     <tr>
-      <% w.days.each do |d| %>
+      <% days = w.days.order('id ASC')
+      days.each do |d| %>
       <td><ul>
         <% if d.focus %><li class="focus">
         <%= d.focus %></li><% end %>
 
         <% d.assignments.each do |a| %>
-        <li><% if a.url %><a href="<%= a.url %>"><%end%>
-        <%= a.name %></a></li>
+          <li>
+            <% if a.url %>
+              <a href="<%= a.url %>"><%= a.name %></a>
+            <% else %>
+              <%= a.name %>
+            <% end %>
+          </li>
         <% end %>
       </ul></td>
       <% end %>
