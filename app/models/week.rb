@@ -4,7 +4,4 @@ class Week < ActiveRecord::Base
   has_many :assignments, through: :days
 
   validates :campaign, presence: true
-  validates :systems_check, uniqueness: true
-  validates :blog_name, uniqueness: true
-  validates :blog_url, uniqueness: true
 end
