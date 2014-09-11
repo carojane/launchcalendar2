@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910212717) do
+ActiveRecord::Schema.define(version: 20140911204601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "assignments", force: true do |t|
-    t.string  "name",   null: false
+    t.string  "name",                        null: false
     t.string  "url"
-    t.integer "day_id", null: false
+    t.date    "date",                        null: false
+    t.integer "campaign_id"
+    t.boolean "extra",       default: false
   end
 
   create_table "campaigns", force: true do |t|
@@ -29,17 +31,17 @@ ActiveRecord::Schema.define(version: 20140910212717) do
   end
 
   create_table "days", force: true do |t|
-    t.string  "name",        null: false
-    t.integer "week_id",     null: false
     t.string  "focus"
-    t.integer "campaign_id", null: false
+    t.integer "campaign_id",                        null: false
+    t.date    "date",        default: '2014-08-11', null: false
   end
 
   create_table "weeks", force: true do |t|
-    t.integer "campaign_id",  null: false
+    t.integer "campaign_id",              null: false
     t.string  "blog_name"
     t.string  "blog_url"
     t.string  "systemscheck"
+    t.integer "week_number",  default: 1, null: false
   end
 
 end
