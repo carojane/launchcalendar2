@@ -1,0 +1,139 @@
+<ul class="all-forms">
+  <li>
+  <h3>Daily Focus</h3>
+    <div class="form">
+      <form action="/day" method="post">
+        <div class="form-input-wrapper">
+          <label>Focus</label>
+          <input type="text" name="focus">
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="campaign">Campaign</label>
+          <select name="campaign">
+            <option value ="1">Alpha</option>
+            <option value ="2">Bravo</option>
+            <option value ="3">Charlie</option>
+            <option value ="4">Delta</option>
+            <option value ="5">Echo</option>
+          </select>
+        </div>
+
+        <div class="form-input-wrapper">
+          <select name="day">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+          </select>
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="week1">Week 1</label>
+          <input type="radio" name="week1" value="1"><br>
+          <label for="week2">Week 2</label>
+          <input type="radio" name="week2" value="2">
+        </div>
+
+        <div class="form-input-wrapper">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </li>
+
+  <li>
+  <h3>Assignments</h3>
+    <div class="form">
+      <form action="/day" method="post">
+        <div class="form-input-wrapper">
+          <label>Title</label>
+          <input type="text" name="name">
+        </div>
+
+        <div class="form-input-wrapper">
+          <label>URL</label>
+          <input type="text" name="url">
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="campaign">Campaign</label>
+          <select name="campaign">
+            <option value ="1">Alpha</option>
+            <option value ="2">Bravo</option>
+            <option value ="3">Charlie</option>
+            <option value ="4">Delta</option>
+            <option value ="5">Echo</option>
+          </select>
+        </div>
+
+        <div class="form-input-wrapper">
+          <select name="day">
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6" selected>Side Work</option>
+          </select>
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="week1">Week 1</label>
+          <input type="radio" name="week1" value="<%=  %>"><br>
+          <label for="week2">Week 2</label>
+          <input type="radio" name="week2" value="<%= %>">
+        </div>
+
+        <div class="form-input-wrapper">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </li>
+
+  <li>
+  <h3>Systems Check</h3>
+    <div class="form">
+      <form action="/day" method="post">
+        <div class="form-input-wrapper">
+          <label for="systemscheck">Systems Check Title</label>
+          <input type="text" name="systemscheck">
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="blog_title">Blog Title</label>
+          <input type="text" name="blog_title">
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="blog_url">Blog URL</label>
+          <input type="text" name="blog_url">
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="campaign">Campaign</label>
+          <select name="campaign">
+            <option value ="1">Alpha</option>
+            <option value ="2">Bravo</option>
+            <option value ="3">Charlie</option>
+            <option value ="4">Delta</option>
+            <option value ="5">Echo</option>
+          </select>
+        </div>
+
+        <div class="form-input-wrapper">
+          <label for="week1">Week 1</label>
+          <input type="radio" name="week1" value="<%=  %>"><br>
+          <label for="week2">Week 2</label>
+          <input type="radio" name="week2" value="<%= %>">
+        </div>
+
+        <div class="form-input-wrapper">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </li>
+</ul>

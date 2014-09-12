@@ -14,3 +14,7 @@ get '/' do
 
   erb :index
 end
+
+get '/day' do
+  erb :'/day/index'
+end

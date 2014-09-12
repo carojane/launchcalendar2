@@ -1,5 +1,5 @@
 body {
-  background: #f7fdff;
+  background: #f0f8ff;
 }
 
 header {
@@ -47,8 +47,22 @@ tr, td, th {
   font-size: 2em;
 }
 
+.side_projects {
+  background: #5d8aa8;
+  border: 1px solid #d6d6d6;
+  color: #e0e0e0;
+}
+
+.side_projects a {
+  color: #ffffff;
+}
+
 ul {
   list-style: none;
+}
+
+li {
+  text-align: center;
 }
 
 .focus {
@@ -63,3 +77,27 @@ ul {
 
 a { color: steelblue;}
 a:hover { color: black;}
+
+.form {
+  border: 1px solid grey;
+  background: white;
+  border-radius: 5%;
+  padding: 10px;
+  margin: 10px;
+  width: 260px;
+}
+
+.form-input-wrapper {
+  text-align: center;
+  margin: 1em;
+}
+
+.all-forms {
+  margin: 10px auto;
+  width: 300px;
+}
+
+.all-forms h3 {
+  text-align: left;
+  margin-left: 15px;
+}
