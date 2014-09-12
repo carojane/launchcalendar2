@@ -4,4 +4,5 @@ class Week < ActiveRecord::Base
 
   validates :campaign, presence: true
   validates :week_number, presence: true
+  validates :week_start, presence: true
 end

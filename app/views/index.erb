@@ -1,52 +1,134 @@
-  <table cellspacing="0" class="blockCenter" id="daysWeek">
-    <tr>
-      <th class="firstCell">Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-      <th class="lastCell">Extra Work</th>
-    </tr>
-  </table>
+
 
 <% @campaigns.each do |campaign| %>
   <table cellspacing="0" class="blockCenter">
-  <tr>
-    <td colspan="6" class="campaign">
-    <h2><%= campaign.name %></h2>
-    <p><%= campaign.start_date %> - <%= campaign.end_date %></p>
-    </td>
-  </tr>
-
-   <% weeks = campaign.weeks.order('id ASC')
-    weeks.each do |w| %>
-
     <tr>
-      <% days = w.days.order('id ASC')
-      days.each do |d| %>
-      <td><ul>
-        <% if d.focus %><li class="focus">
-        <%= d.focus %></li><% end %>
+      <td colspan="6" class="campaign">
+        <h2><%= campaign.name %></h2>
+        <p><%= campaign.start_date %> - <%= campaign.end_date %></p>
+      </td>
 
-        <% d.assignments.each do |a| %>
-          <li>
-            <% if a.url %>
-              <a href="<%= a.url %>"><%= a.name %></a>
-            <% else %>
-              <%= a.name %>
+    </tr>
+    <tr>
+      <td rowspan="5" class="side_projects">
+        <ul>
+          <% campaign.assignments.each do |a|%>
+            <% if a.extra %>
+              <li>
+                <% if a.url %>
+                  <a href="<%= a.url %>"><%= a.name %></a>
+                <% else %>
+                  <%= a.name %>
+                <% end %>
+              </li>
             <% end %>
-          </li>
-        <% end %>
-      </ul></td>
-      <% end %>
-    </tr>
-    <tr>
-      <td colspan="6" class="systems_check"><ul>
-          <li><%= w.systemscheck %></li>
-          <li><% if w.blog_url %><a href="<%= w.blog_url %>"><%end%>Blog</a></li>
-      </ul></td>
+          <% end %>
+        </ul>
+      </td>
     </tr>
 
+
+    <% campaign.weeks.order(week_number: :asc).each do |week| %>
+    <tr>
+      <td class="firstCell">
+        <ul>
+          <li class="focus">
+            <%= campaign.days.where(date: week.week_start)[0].focus %>
+          </li>
+          <% campaign.assignments.where(date: week.week_start).each do |a| %>
+              <li>
+                <% if a.url %>
+                  <a href="<%= a.url %>"><%= a.name %></a>
+                <% else %>
+                  <%= a.name %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li class="focus">
+            <%= campaign.days.where(date: week.week_start + 1)[0].focus %>
+          </li>
+          <% campaign.assignments.where(date: week.week_start + 1).each do |a| %>
+              <li>
+                <% if a.url %>
+                  <a href="<%= a.url %>"><%= a.name %></a>
+                <% else %>
+                  <%= a.name %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li class="focus">
+            <%= campaign.days.where(date: week.week_start + 2)[0].focus %>
+          </li>
+          <% campaign.assignments.where(date: week.week_start + 2).each do |a| %>
+              <li>
+                <% if a.url %>
+                  <a href="<%= a.url %>"><%= a.name %></a>
+                <% else %>
+                  <%= a.name %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li class="focus">
+            <%= campaign.days.where(date: week.week_start + 3)[0].focus %>
+          </li>
+          <% campaign.assignments.where(date: week.week_start + 3).each do |a| %>
+              <li>
+                <% if a.url %>
+                  <a href="<%= a.url %>"><%= a.name %></a>
+                <% else %>
+                  <%= a.name %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+      </td>
+      <td class="lastCell">
+        <ul>
+          <li class="focus">
+            <%= campaign.days.where(date: week.week_start + 4)[0].focus %>
+          </li>
+          <% campaign.assignments.where(date: week.week_start + 4).each do |a| %>
+              <li>
+                <% if a.url %>
+                  <a href="<%= a.url %>"><%= a.name %></a>
+                <% else %>
+                  <%= a.name %>
+                <% end %>
+              </li>
+          <% end %>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="6" class="systems_check">
+        <ul>
+          <li><%= week.systemscheck %></li>
+          <li>
+          <% if week.blog_url %>
+            <a href="<%= week.blog_url %>">Blog</a>
+          <% else %>
+            Blog
+          <% end %>
+          </li>
+        </ul>
+      </td>
+    </tr>
     <% end %>
+
   </table>
 <% end %>
+
+
