@@ -33,7 +33,8 @@
       <td class="firstCell">
         <ul>
           <li class="focus">
-            <%= campaign.days.where(date: week.week_start)[0].focus %>
+            <% day = Day.find_by(date: week.week_start) %>
+            <%= day.focus if day %>
           </li>
           <% campaign.assignments.where(date: week.week_start).each do |a| %>
               <li>
@@ -49,7 +50,8 @@
       <td>
         <ul>
           <li class="focus">
-            <%= campaign.days.where(date: week.week_start + 1)[0].focus %>
+            <% day = Day.find_by(date: week.week_start + 1) %>
+            <%= day.focus if day %>
           </li>
           <% campaign.assignments.where(date: week.week_start + 1).each do |a| %>
               <li>
@@ -65,7 +67,8 @@
       <td>
         <ul>
           <li class="focus">
-            <%= campaign.days.where(date: week.week_start + 2)[0].focus %>
+            <% day = Day.find_by(date: week.week_start + 2) %>
+            <%= day.focus if day %>
           </li>
           <% campaign.assignments.where(date: week.week_start + 2).each do |a| %>
               <li>
@@ -81,7 +84,8 @@
       <td>
         <ul>
           <li class="focus">
-            <%= campaign.days.where(date: week.week_start + 3)[0].focus %>
+            <% day = Day.find_by(date: week.week_start + 3) %>
+            <%= day.focus if day %>
           </li>
           <% campaign.assignments.where(date: week.week_start + 3).each do |a| %>
               <li>
@@ -97,7 +101,8 @@
       <td class="lastCell">
         <ul>
           <li class="focus">
-            <%= campaign.days.where(date: week.week_start + 4)[0].focus %>
+            <% day = Day.find_by(date: week.week_start + 4) %>
+            <%= day.focus if day %>
           </li>
           <% campaign.assignments.where(date: week.week_start + 4).each do |a| %>
               <li>
