@@ -21,19 +21,19 @@
 
         <div class="form-input-wrapper">
           <select name="day">
-            <option value="1">Monday</option>
-            <option value="2">Tuesday</option>
-            <option value="3">Wednesday</option>
-            <option value="4">Thursday</option>
-            <option value="5">Friday</option>
+            <option value="0">Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
           </select>
         </div>
 
         <div class="form-input-wrapper">
-          <label for="week1">Week 1</label>
-          <input type="radio" name="week1" value="1"><br>
-          <label for="week2">Week 2</label>
-          <input type="radio" name="week2" value="2">
+          <label for="week">Week 1</label>
+          <input type="radio" name="week" value="1"><br>
+          <label for="week">Week 2</label>
+          <input type="radio" name="week" value="2">
         </div>
 
         <div class="form-input-wrapper">
@@ -46,7 +46,7 @@
   <li>
   <h3>Assignments</h3>
     <div class="form">
-      <form action="/day" method="post">
+      <form action="/assignment" method="post">
         <div class="form-input-wrapper">
           <label>Title</label>
           <input type="text" name="name">
@@ -70,20 +70,20 @@
 
         <div class="form-input-wrapper">
           <select name="day">
-            <option value="1">Monday</option>
-            <option value="2">Tuesday</option>
-            <option value="3">Wednesday</option>
-            <option value="4">Thursday</option>
-            <option value="5">Friday</option>
-            <option value="6" selected>Side Work</option>
+            <option value="0">Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
+            <option value="5" selected>Side Work</option>
           </select>
         </div>
 
         <div class="form-input-wrapper">
           <label for="week1">Week 1</label>
-          <input type="radio" name="week1" value="<%=  %>"><br>
+          <input type="radio" name="week" value="1"><br>
           <label for="week2">Week 2</label>
-          <input type="radio" name="week2" value="<%= %>">
+          <input type="radio" name="week" value="2">
         </div>
 
         <div class="form-input-wrapper">
@@ -96,7 +96,7 @@
   <li>
   <h3>Systems Check</h3>
     <div class="form">
-      <form action="/day" method="post">
+      <form action="/week" method="post">
         <div class="form-input-wrapper">
           <label for="systemscheck">Systems Check Title</label>
           <input type="text" name="systemscheck">
@@ -124,10 +124,10 @@
         </div>
 
         <div class="form-input-wrapper">
-          <label for="week1">Week 1</label>
-          <input type="radio" name="week1" value="<%=  %>"><br>
-          <label for="week2">Week 2</label>
-          <input type="radio" name="week2" value="<%= %>">
+          <label for="week">Week 1</label>
+          <input type="radio" name="week" value="1"><br>
+          <label for="week">Week 2</label>
+          <input type="radio" name="week" value="2">
         </div>
 
         <div class="form-input-wrapper">
