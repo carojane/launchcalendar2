@@ -1,20 +1,22 @@
-# Sinatra Active Record Starter Kit
+# Launch Academy Calendar
+This is a dynamic website recording my work during the Fall 2014 Cohort of Launch Academy
 
-This template provides a basic [Sinatra](http://www.sinatrarb.com/) application
-that includes:
+## /Forms
 
-- [Active Record](http://guides.rubyonrails.org/active_record_querying.html)
-using [sinatra-activerecord](https://github.com/janko-m/sinatra-activerecord)
-- [PostgreSQL](http://www.postgresql.org/) for a database
-- [RSpec](https://github.com/rspec/rspec) for unit testing
-- [Capybara](https://github.com/jnicklas/capybara) for acceptance testing
-- [Pry](https://github.com/pry/pry) for debugging
+Daily Focus
+Adds a focus for each day, or overwrites the focus if there is one already listed for that day.
 
-## Getting Started
+Assignmets
+Adds an assignment. If there is already an assignment with the same name, the information will be overwritten.
+
+Systems Check
+Adds or updates the weekly systems check title, blog url and title.
+
+## Make This Your Own
 
 ```no-highlight
 # Clone down this template
-git clone git@github.com:LaunchAcademy/sinatra-activerecord-starter-kit.git <YOUR_APP_NAME>
+git clone git@github.com:carojane/launchcalendar2.git <YOUR_APP_NAME>
 
 # Move into your app's directory
 cd <YOUR_APP_NAME>
@@ -25,29 +27,17 @@ rm -rf .git && git init && git add -A && git commit -m 'Initial commit'
 # Install all the gems
 bundle install
 ```
+## For members of LA Fall 2014 cohort
 
-### Configuring Your Database
+To record your own Launch Academy assignments, clear the 'Assignments' table then use the /form page to enter your own information.
 
-This template is set up for using a PostgreSQL database. You will need to create a
-`config/database.yml`. There is an example at `config/database.example.yml`.
+By entering your weekly blog post title and url on the /forms page, you will overwrite my info.
 
-Once you've created a `config/database.yml`, you can create your database with
-`rake db:create`.
+If you want to change a focus of a particular day, use the /forms page to overwrite my info.
 
-## Rake Tasks
+## For future cohorts
 
-This template uses the [sinatra-activerecord](https://github.com/janko-m/sinatra-activerecord)
-gem, which provides the following rails-like rake tasks:
-
-```no-highlight
-rake db:create            # create the database from config/database.yml from the current Sinatra env
-rake db:create_migration  # create an ActiveRecord migration
-rake db:drop              # drops the data from config/database.yml from the current Sinatra env
-rake db:migrate           # migrate the database (use version with VERSION=n)
-rake db:rollback          # roll back the migration (use steps with STEP=n)
-rake db:schema:dump       # dump schema into file
-rake db:schema:load       # load schema into database
-rake db:seed              # load the seed data from db/seeds.rb
-rake db:setup             # create the database and load the schema
-rake db:test:prepare      # Prepare test database from development schema
-```
+Clear the 'Assignments' and 'Days' tables.
+Go into the 'Weeks' table and change the 'week_start' to match the Monday of each week.
+Go into the 'Campaigns' table and change the 'start_date' and 'end_date' of each campaign.
+Record your information using the /forms page.
