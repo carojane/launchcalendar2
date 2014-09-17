@@ -4,7 +4,7 @@ This is a dynamic website recording my work during the Fall 2014 Cohort of Launc
 screenshot:
 ![screenshot](http://carojane.github.io/images/alphacal.png "Alpha")
 
-## /Forms
+## Forms
 
 ###Daily Focus
 Adds a focus for each day, or overwrites the focus if there is one already listed for that day.
