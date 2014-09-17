@@ -1,15 +1,20 @@
 # Launch Academy Calendar
 This is a dynamic website recording my work during the Fall 2014 Cohort of Launch Academy
 
+screenshot:
+![screenshot](http://carojane.github.io/images/alphacal.png "Alpha")
+
 ## /Forms
 
-Daily Focus
+###Daily Focus
 Adds a focus for each day, or overwrites the focus if there is one already listed for that day.
 
-Assignmets
+###Assignmets
 Adds an assignment. If there is already an assignment with the same name, the information will be overwritten.
 
-Systems Check
+![screenshot](http://carojane.github.io/images/assignmentlog.png "assignment")
+
+###Systems Check
 Adds or updates the weekly systems check title, blog url and title.
 
 ## Make This Your Own
