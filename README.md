@@ -1,7 +1,6 @@
 # Launch Academy Calendar
 This is a dynamic website recording my work during the Fall 2014 Cohort of Launch Academy
 
-screenshot:
 ![screenshot](http://carojane.github.io/images/alphacal.png "Alpha")
 
 ## Forms
