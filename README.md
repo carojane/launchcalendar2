@@ -30,18 +30,14 @@ rm -rf .git && git init && git add -A && git commit -m 'Initial commit'
 
 # Install all the gems
 bundle install
+
+# Create database
+rake db:create
 ```
 ## For members of LA Fall 2014 cohort
 
-To record your own Launch Academy assignments, clear the 'Assignments' table then use the /form page to enter your own information.
-
-By entering your weekly blog post title and url on the /forms page, you will overwrite my info.
-
-If you want to change a focus of a particular day, use the /forms page to overwrite my info.
+To record your own Launch Academy assignments, run `rake db:migrate` and go at it.
 
 ## For future cohorts
 
-Clear the 'Assignments' and 'Days' tables.
-Go into the 'Weeks' table and change the 'week_start' to match the Monday of each week.
-Go into the 'Campaigns' table and change the 'start_date' and 'end_date' of each campaign.
-Record your information using the /forms page.
+Before running migrations (or after resetting database if you already did), go into "add_initial_campaigns" migration and change campaign dates to reflect your cohort's campaign. Also change `Date.new(2014,8,11)` to the first date of your cohort.
