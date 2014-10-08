@@ -40,4 +40,4 @@ To record your own Launch Academy assignments, run `rake db:migrate` and go at i
 
 ## For future cohorts
 
-Before running migrations (or after resetting database if you already did), go into "add_initial_campaigns" migration and change campaign dates to reflect your cohort's campaign. Also change `Date.new(2014,8,11)` to the first date of your cohort.
+Before running migrations (or after resetting database if you already did), go into "add_initial_campaigns" migration and change campaign dates to reflect your cohort's campaign. Also change `Date.new(2014,8,11)` to the first date of your cohort. Then run `rake db:migrate`.
