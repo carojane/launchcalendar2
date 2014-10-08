@@ -57,7 +57,6 @@ def add_assignment(params)
   else
     assignment.update(extra: false)
   end
-  binding.pry
 end
 
 ##########################################################
