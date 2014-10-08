@@ -14,9 +14,6 @@ end
 ##########################################################
 ##########################################################
 
-def validate_url
-end
-
 def update_week(params)
     week = []
     week = Week.find_by(campaign_id: params[:campaign].to_i, week_number: params[:week].to_i)
