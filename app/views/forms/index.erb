@@ -11,11 +11,11 @@
         <div class="form-input-wrapper">
           <label for="campaign">Campaign</label>
           <select name="campaign">
-            <option value ="1">Alpha</option>
-            <option value ="2">Bravo</option>
-            <option value ="3">Charlie</option>
-            <option value ="4">Delta</option>
-            <option value ="5">Echo</option>
+            <% @campaigns.each do |campaign| %>
+              <option value ="<%= campaign.id %>">
+                <%= campaign.name %>
+              </option>
+            <% end %>
           </select>
         </div>
 
@@ -60,11 +60,11 @@
         <div class="form-input-wrapper">
           <label for="campaign">Campaign</label>
           <select name="campaign">
-            <option value ="1">Alpha</option>
-            <option value ="2">Bravo</option>
-            <option value ="3">Charlie</option>
-            <option value ="4">Delta</option>
-            <option value ="5">Echo</option>
+            <% @campaigns.each do |campaign| %>
+              <option value ="<%= campaign.id %>">
+                <%= campaign.name %>
+              </option>
+            <% end %>
           </select>
         </div>
 
@@ -115,11 +115,11 @@
         <div class="form-input-wrapper">
           <label for="campaign">Campaign</label>
           <select name="campaign">
-            <option value ="1">Alpha</option>
-            <option value ="2">Bravo</option>
-            <option value ="3">Charlie</option>
-            <option value ="4">Delta</option>
-            <option value ="5">Echo</option>
+            <% @campaigns.each do |campaign| %>
+              <option value ="<%= campaign.id %>">
+                <%= campaign.name %>
+              </option>
+            <% end %>
           </select>
         </div>
 

@@ -67,6 +67,8 @@ get '/' do
 end
 
 get '/forms' do
+  @campaigns = Campaign.all.order(name: :asc)
+
   erb :'/forms/index'
 end
 
